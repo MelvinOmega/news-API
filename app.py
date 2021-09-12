@@ -1,13 +1,13 @@
-from flask import Flask, render_template
-from newsapi import NewsApiClient
+# from flask import Flask, render_template
+# from newsapi import NewsApiClient
 
 
-app = Flask(__name__)
+# app = Flask(__name__)
 
 
 
-@app.route('/')
-def Index():
+# @app.route('/')
+# def Index():
     # newsapi = NewsApiClient(api_key="58b6623b42d44eef9aae1e4cb150dba2")
     # topheadlines = newsapi.get_top_headlines(q='bitcoin',
     #                                       sources='bbc-news,the-verge',
