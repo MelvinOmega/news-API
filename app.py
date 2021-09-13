@@ -29,31 +29,31 @@
     # sources = newsapi.get_sources() 
 
 
-    newsapi = NewsApiClient(api_key="58b6623b42d44eef9aae1e4cb150dba2")
-    topheadlines = newsapi.get_top_headlines(sources="al-jazeera-english")
+#     newsapi = NewsApiClient(api_key="58b6623b42d44eef9aae1e4cb150dba2")
+#     topheadlines = newsapi.get_top_headlines(sources="al-jazeera-english")
 
 
-    articles = topheadlines['articles']
+#     articles = topheadlines['articles']
 
-    desc = []
-    news = []
-    img = []
-
-
-    for i in range(len(articles)):
-        myarticles=[articles[i]]
-
-        news.append(myarticles['title'])
-        desc.append(myarticles['description'])
-        img.append(myarticles['urlToImages'])
-
-    mylist = zip(news, desc, img)
+#     desc = []
+#     news = []
+#     img = []
 
 
+#     for i in range(len(articles)):
+#         myarticles=[articles[i]]
 
-    return render_template('index.html', context= mylist)
+#         news.append(myarticles['title'])
+#         desc.append(myarticles['description'])
+#         img.append(myarticles['urlToImages'])
+
+#     mylist = zip(news, desc, img)
 
 
 
-if __name__ == "__main__":
-    app.run(debug=True)
+#     return render_template('index.html', context= mylist)
+
+
+
+# if __name__ == "__main__":
+#     app.run(debug=True)

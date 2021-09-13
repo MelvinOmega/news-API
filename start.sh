@@ -1,0 +1,4 @@
+export NEWS_API_KEY=a6c5c1049c834e5c81000fc6a5bddebc
+export SECRET_KEY=MelvinOmega
+
+python3.8 manage.py server
