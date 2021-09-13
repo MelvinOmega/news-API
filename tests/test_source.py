@@ -1,22 +1,16 @@
 import unittest
-from app.models import Source
+from flask import current_app
+from app import create_app
 
-class SourceTest(unittest.TestCase):
-    '''
-    Test Class to test the behaviour of the Source class
-    '''
-
+class BasicsTestCase(unittest.TestCase):
     def setUp(self):
-        '''
-        Set up method that will run before every Test
-        '''
-        self.new_source = Source('cnn','CNN.','View the latest news and breaking news today for U.S., world, weather, entertainment, politics and health at CNN','https://www.nytimes.com/2018/08/31/sports/tennis/us-open-results.html')
+        self.app = create_app('development')
+        self.app_context = self.app.app_context()
+        self.app_context.push()
 
-    def test_instance(self):
-        '''
-        Test to check creation of new article Source instance
-        '''
-        self.assertTrue(isinstance(self.new_source,Source))
+    def tearDown(self):
 
-if __name__ == '__main__':
-    unittest.main() 
+        self.app_context.pop()
+
+    def test_app_exists(self):
+        self.assertFalse(current_app is None)
