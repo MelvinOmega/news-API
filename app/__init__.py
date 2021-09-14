@@ -1,10 +1,3 @@
-# from flask import Flask
-
-# # Initializing application
-# app = Flask(__name__)
-
-
-
 from flask import Flask
 from flask_bootstrap import Bootstrap
 from config import config_options

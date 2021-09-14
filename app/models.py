@@ -1,75 +1,25 @@
-class Sources:
+class News:
     '''
-    Sources class to define Sources Objects
+    News class to define News Objects
     '''
-
-    def __init__(self,id,name,description,url,category,country,language):
+    def __init__(self,id,name,url,description,category, country):
         self.id =id
-        self.name = name
-        self.description = description
+        self.name= name
         self.url = url
+        self.description = description
         self.category = category
         self.country = country
-        self.language = language
-
 class Articles:
-    '''
-    Articles class to define articles objects
-    '''
-    def __init__(self,id,author,title,description,url,image,date):
-        self.id = id
-        self.author = author
+    get_articles = []
+    def __init__(self,title,author,url,description, urlToImage, publishedAt, content):
         self.title = title
-        self.description = description
+        self.author = author
         self.url = url
-        self.image = image
-        self.date = date 
+        self.description= description
+        self.urlToImage = urlToImage
+        self.publishedAt = publishedAt
+        self.content = content
 
 
 
-# class Article:
-#     '''
-#     Class that instantiates objects of the news article objects of the news sources
-#     '''
-#     def __init__(self,author,description,time,url,image,title):
-#         self.author = author
-#         self.description = description
-#         self.time = time
-#         self.url = url
-#         self.image = image
-#         self.title = title
-
-# class Category:
-#     '''
-#     Class that instantiates objects of the news categories objects of the news sources
-#     '''
-#     def __init__(self,author,description,time,url,image,title):
-#         self.author = author
-#         self.description = description
-#         self.time = time
-#         self.url = url
-#         self.image = image
-#         self.title = title
-
-# class Source:
-#     '''
-#     Source class to define source objects
-#     '''
-#     def __init__(self,id,name,description,url):
-#         self.id = id
-#         self.name = name
-#         self.description = description
-#         self.url = url
-
-# class Headlines:
-#     '''
-#     Class that instantiates objects of the headlines categories objects of the news sources
-#     '''
-#     def __init__(self,author,description,time,url,image,title):
-#         self.author = author
-#         self.description = description
-#         self.time = time
-#         self.url = url
-#         self.image = image
-#         self.title = title
 

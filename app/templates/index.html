@@ -1,11 +1,18 @@
-<h1>hello</h1>
 
-<!-- <body> -->
-    <!-- Popular news section  -->
-    <!-- <h3> Popular News</h3>
-     <ul>
-        {% for popular_news in popular %}
-            <li>{{ popular_news.title}}</li>
-        {% endfor %}
-    </ul>
-</body> -->
+{% extends 'base.html'%}
+{% import 'macros.html' as macro%}
+ <!-- Styles block  -->
+ {% block styles%}
+    {{ super() }}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+{% endblock %}
+ <!-- Content block  -->
+{% block content %}
+ <div class="container">
+    <h1  class="text-center" style="color: rgb(180, 184, 118);" >
+        Sources
+    </h1>
+    {{macro.displayNews(current_news)}}
+ </div>
+{% endblock%}
